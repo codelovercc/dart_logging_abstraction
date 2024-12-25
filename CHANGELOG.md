@@ -1,3 +1,8 @@
 ## 1.0.0
 
 - Initial version.
+
+## 1.0.1
+
+- Delete logger name field.
+- Change linter not to avoid lines longer than 80 characters.
