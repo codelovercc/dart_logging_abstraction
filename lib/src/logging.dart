@@ -54,8 +54,6 @@ extension LogLevelOperatorExtensions on LogLevel {
 
 /// A logger that log information
 abstract interface class ILogger {
-  /// The logger's name
-  abstract final String name;
 
   /// Check if the given [logLevel] is enabled.
   bool isEnabled(LogLevel logLevel);
@@ -74,15 +72,7 @@ abstract interface class ILoggerFactory {
   /// create [ILogger]
   ///
   /// - [name] the name of the logger.
-  ILogger create(String name);
-}
-
-/// extensions for [ILoggerFactory]
-extension LoggerFactoryExtensions on ILoggerFactory {
-  /// Create a logger use a type name as the logger's name.
-  ///
-  /// - [T] the type.
-  ILogger createLogger<T>() => create("$T");
+  ILogger createLogger();
 }
 
 /// Provide logging methods for [ILogger]

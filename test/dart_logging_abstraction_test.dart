@@ -4,7 +4,7 @@ import 'package:test/scaffolding.dart';
 void main() {
   test("Example logging", () {
     // Logging implementation example can find in lib/src/console_logging.dart
-    final traceLogger = LoggerFactory(minLevel: LogLevel.trace).createLogger<MyClass>();
+    final traceLogger = LoggerFactory(minLevel: LogLevel.trace).createLogger();
     traceLogger.fatal("Fatal on traceLogger", error: Error(), stackTrace: StackTrace.current);
     traceLogger.error("Error on traceLogger", error: Error(), stackTrace: StackTrace.current);
     traceLogger.warning("Warning on traceLogger");
@@ -12,7 +12,7 @@ void main() {
     traceLogger.debug("Debug on traceLogger");
     traceLogger.trace("trace on traceLogger");
 
-    final infoLogger = LoggerFactory(minLevel: LogLevel.info).create("InfoLogger");
+    final infoLogger = LoggerFactory(minLevel: LogLevel.info).createLogger();
     infoLogger.fatal("Fatal on infoLogger", error: Error(), stackTrace: StackTrace.current);
     infoLogger.error("Error on infoLogger", error: Error(), stackTrace: StackTrace.current);
     infoLogger.warning("Warning on infoLogger");
@@ -21,5 +21,3 @@ void main() {
     infoLogger.trace("trace on infoLogger");
   });
 }
-
-class MyClass {}
