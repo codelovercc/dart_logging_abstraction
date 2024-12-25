@@ -37,7 +37,6 @@ enum LogLevel {
 
 /// Provide operators for [LogLevel]
 extension LogLevelOperatorExtensions on LogLevel {
-
   /// returns `true` if this [LogLevel] is greater than [other]
   bool operator >(LogLevel other) => _value > other._value;
 

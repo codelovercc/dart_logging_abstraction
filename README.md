@@ -13,6 +13,13 @@ and the Flutter guide for
 
 # dart_logging_abstraction
 
+[![pub package](https://img.shields.io/pub/v/logger.svg?logo=dart&logoColor=00b9fc)](https://pub.dartlang.org/packages/dart_logging_abstraction)
+[![CI](https://img.shields.io/github/actions/workflow/status/codelovercc/dart_logging_abstraction/dart.yml?branch=main&logo=github-actions&logoColor=white)](https://github.com/codelovercc/dart_logging_abstraction/actions)
+[![Last Commits](https://img.shields.io/github/last-commit/codelovercc/dart_logging_abstraction?logo=git&logoColor=white)](https://github.com/codelovercc/dart_logging_abstraction/commits/main)
+[![Pull Requests](https://img.shields.io/github/issues-pr/codelovercc/dart_logging_abstraction?logo=github&logoColor=white)](https://github.com/codelovercc/dart_logging_abstraction/pulls)
+[![Code size](https://img.shields.io/github/languages/code-size/codelovercc/dart_logging_abstraction?logo=github&logoColor=white)](https://github.com/codelovercc/dart_logging_abstraction)
+[![License](https://img.shields.io/github/license/codelovercc/dart_logging_abstraction?logo=open-source-initiative&logoColor=green)](https://github.com/codelovercc/dart_logging_abstraction/blob/main/LICENSE)
+
 An logging abstraction package for logging.
 
 ## Features
