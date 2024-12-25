@@ -1,5 +1,5 @@
 name: dart_logging_abstraction
-description: A starting point for Dart libraries or applications.
+description: An logging abstraction package for logging.
 version: 1.0.0
 repository: https://github.com/codelovercc/dart_logging_abstraction
 
