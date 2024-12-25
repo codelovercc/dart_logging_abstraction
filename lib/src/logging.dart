@@ -54,7 +54,6 @@ extension LogLevelOperatorExtensions on LogLevel {
 
 /// A logger that log information
 abstract interface class ILogger {
-
   /// Check if the given [logLevel] is enabled.
   bool isEnabled(LogLevel logLevel);
 
