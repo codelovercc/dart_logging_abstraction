@@ -23,8 +23,7 @@ class ConsoleLogger implements ILogger {
     if (stackTrace != null) {
       writer.writeln(stackTrace);
     }
-    writer.write("\b\b");
-    print(writer);
+    print(writer.toString().trimRight());
   }
 }
 
