@@ -1,6 +1,8 @@
 import 'logging.dart';
 
 /// An example of console logger implementation of [ILogger]
+///
+/// use [T] type as the logger name.
 class ConsoleLogger<T> extends ILogger4<T> {
   final LogLevel _minLevel;
 
@@ -40,6 +42,6 @@ class LoggerFactory implements ILoggerFactory {
 
   @override
   ILogger4<T> createLogger<T>() {
-    return ConsoleLogger(minLevel: _minLevel);
+    return ConsoleLogger<T>(minLevel: _minLevel);
   }
 }
