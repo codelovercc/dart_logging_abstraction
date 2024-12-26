@@ -1,12 +1,10 @@
 import 'logging.dart';
 
 /// An example of console logger implementation of [ILogger]
-class ConsoleLogger implements ILogger {
-  @override
-  final String name;
+class ConsoleLogger<T> extends ILogger4<T> {
   final LogLevel _minLevel;
 
-  const ConsoleLogger({required this.name, required LogLevel minLevel}) : _minLevel = minLevel;
+  ConsoleLogger({super.name, required LogLevel minLevel}) : _minLevel = minLevel;
 
   @override
   bool isEnabled(LogLevel logLevel) => logLevel >= _minLevel;
@@ -38,5 +36,10 @@ class LoggerFactory implements ILoggerFactory {
   @override
   ILogger create(String name) {
     return ConsoleLogger(name: name, minLevel: _minLevel);
+  }
+
+  @override
+  ILogger4<T> createLogger<T>() {
+    return ConsoleLogger(minLevel: _minLevel);
   }
 }

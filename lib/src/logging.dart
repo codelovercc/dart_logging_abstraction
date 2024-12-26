@@ -69,20 +69,31 @@ abstract interface class ILogger {
   void log(dynamic message, LogLevel logLevel, {Object? error, StackTrace? stackTrace});
 }
 
+/// Logger for type [T]
+abstract class ILogger4<T> implements ILogger {
+  @override
+  final String name;
+
+  /// Create a logger
+  ///
+  /// If [name] is not `null` then it will be used as the logger name, otherwise use type [T] as the logger name.
+  ILogger4({String? name})
+      : name = name ?? "$T",
+        assert(name != null || T != dynamic && T != Object,
+            "The parameters 'name' and 'T' must be specified specifically for one of them.");
+}
+
 /// A factory that creates [ILogger] instance.
 abstract interface class ILoggerFactory {
   /// create [ILogger]
   ///
   /// - [name] the name of the logger.
   ILogger create(String name);
-}
 
-/// extensions for [ILoggerFactory]
-extension LoggerFactoryExtensions on ILoggerFactory {
   /// Create a logger use a type name as the logger's name.
   ///
   /// - [T] the type.
-  ILogger createLogger<T>() => create("$T");
+  ILogger4<T> createLogger<T>();
 }
 
 /// Provide logging methods for [ILogger]
