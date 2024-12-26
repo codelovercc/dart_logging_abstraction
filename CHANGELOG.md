@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Add `ILogger4<T>`
+
 ## 1.0.2
 
 - Trim `ConsoleLogger` message
