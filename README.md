@@ -13,7 +13,7 @@ and the Flutter guide for
 
 # dart_logging_abstraction
 
-[![pub package](https://img.shields.io/pub/v/dart_logging_abstraction?logo=dart&logoColor=00b9fc)](https://pub.dartlang.org/packages/dart_logging_abstraction)
+[![pub package](https://img.shields.io/pub/v/dart_logging_abstraction?logo=dart&logoColor=00b9fc)](https://pub.dev/packages/dart_logging_abstraction)
 [![CI](https://img.shields.io/github/actions/workflow/status/codelovercc/dart_logging_abstraction/dart.yml?branch=main&logo=github-actions&logoColor=white)](https://github.com/codelovercc/dart_logging_abstraction/actions)
 [![Last Commits](https://img.shields.io/github/last-commit/codelovercc/dart_logging_abstraction?logo=git&logoColor=white)](https://github.com/codelovercc/dart_logging_abstraction/commits/main)
 [![Pull Requests](https://img.shields.io/github/issues-pr/codelovercc/dart_logging_abstraction?logo=github&logoColor=white)](https://github.com/codelovercc/dart_logging_abstraction/pulls)
