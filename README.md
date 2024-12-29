@@ -24,7 +24,7 @@ An logging abstraction package for logging.
 
 ## Features
 
-Provide logging interfaces, common objects and with out any implementations.
+Provide logging interfaces, common objects and with example implementations.
 
 ## Getting started
 
