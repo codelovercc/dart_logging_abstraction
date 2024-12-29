@@ -1,3 +1,7 @@
+## 1.0.4
+
+- The issue that `ConsoleLogger<T>.isEnabled` prints `LogLevel.none` logs is fixed
+
 ## 1.0.3
 
 - Add `ILogger4<T>`
