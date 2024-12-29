@@ -9,7 +9,7 @@ class ConsoleLogger<T> extends ILogger4<T> {
   ConsoleLogger({super.name, required LogLevel minLevel}) : _minLevel = minLevel;
 
   @override
-  bool isEnabled(LogLevel logLevel) => logLevel >= _minLevel;
+  bool isEnabled(LogLevel logLevel) => logLevel >= _minLevel && _minLevel != LogLevel.none;
 
   @override
   void log(message, LogLevel logLevel, {Object? error, StackTrace? stackTrace}) {
