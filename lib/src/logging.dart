@@ -1,6 +1,6 @@
 /// Log levels
 ///
-/// [LogLevel.trace]<[LogLevel.debug]<[LogLevel.info]<[LogLevel.warning]<[LogLevel.error]<[LogLevel.fatal]<[LogLevel.none]
+/// [LogLevel.trace]<[LogLevel.debug]<[LogLevel.info]<[LogLevel.warn]<[LogLevel.error]<[LogLevel.fatal]<[LogLevel.none]
 enum LogLevel {
   /// Logs that contain the most detailed messages. These messages may contain sensitive application data.
   /// These messages are disabled by default and should never be enabled in a production environment.
@@ -15,7 +15,7 @@ enum LogLevel {
 
   /// Logs that highlight an abnormal or unexpected event in the application flow,
   /// but do not otherwise cause the application execution to stop.
-  warning(3000),
+  warn(3000),
 
   /// Logs that highlight when the current flow of execution is stopped due to a failure.
   /// These should indicate a failure in the current activity, not an application-wide failure.
@@ -116,11 +116,11 @@ extension LoggerExtensions on ILogger {
   void info(dynamic message, {Object? error, StackTrace? stackTrace}) =>
       log(message, LogLevel.info, error: error, stackTrace: stackTrace);
 
-  /// Write a [LogLevel.warning] level log.
+  /// Write a [LogLevel.warn] level log.
   ///
   /// Your can find the parameters document in method [ILogger.log].
-  void warning(dynamic message, {Object? error, StackTrace? stackTrace}) =>
-      log(message, LogLevel.warning, error: error, stackTrace: stackTrace);
+  void warn(dynamic message, {Object? error, StackTrace? stackTrace}) =>
+      log(message, LogLevel.warn, error: error, stackTrace: stackTrace);
 
   /// Write a [LogLevel.error] level log.
   ///

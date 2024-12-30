@@ -10,7 +10,7 @@ void main() {
       final traceLoggerTester = LoggerTester(logger: traceLogger);
       traceLoggerTester.fatal("Fatal on traceLogger", error: Error(), stackTrace: StackTrace.current);
       traceLoggerTester.error("Error on traceLogger", error: Error(), stackTrace: StackTrace.current);
-      traceLoggerTester.warning("Warning on traceLogger");
+      traceLoggerTester.warn("Warning on traceLogger");
       traceLoggerTester.info("Info on traceLogger");
       traceLoggerTester.debug("Debug on traceLogger");
       traceLoggerTester.trace("trace on traceLogger");
@@ -18,7 +18,7 @@ void main() {
 
       expect(traceLoggerTester.printedLevels[LogLevel.fatal], isTrue);
       expect(traceLoggerTester.printedLevels[LogLevel.error], isTrue);
-      expect(traceLoggerTester.printedLevels[LogLevel.warning], isTrue);
+      expect(traceLoggerTester.printedLevels[LogLevel.warn], isTrue);
       expect(traceLoggerTester.printedLevels[LogLevel.info], isTrue);
       expect(traceLoggerTester.printedLevels[LogLevel.debug], isTrue);
       expect(traceLoggerTester.printedLevels[LogLevel.trace], isTrue);
@@ -29,7 +29,7 @@ void main() {
       final infoLoggerTester = LoggerTester(logger: infoLogger);
       infoLoggerTester.fatal("Fatal on infoLogger", error: Error(), stackTrace: StackTrace.current);
       infoLoggerTester.error("Error on infoLogger", error: Error(), stackTrace: StackTrace.current);
-      infoLoggerTester.warning("Warning on infoLogger");
+      infoLoggerTester.warn("Warning on infoLogger");
       infoLoggerTester.info("Info on infoLogger");
       infoLoggerTester.debug("Debug on infoLogger");
       infoLoggerTester.trace("Trace on infoLogger");
@@ -37,7 +37,7 @@ void main() {
 
       expect(infoLoggerTester.printedLevels[LogLevel.fatal], isTrue);
       expect(infoLoggerTester.printedLevels[LogLevel.error], isTrue);
-      expect(infoLoggerTester.printedLevels[LogLevel.warning], isTrue);
+      expect(infoLoggerTester.printedLevels[LogLevel.warn], isTrue);
       expect(infoLoggerTester.printedLevels[LogLevel.info], isTrue);
       expect(infoLoggerTester.printedLevels[LogLevel.debug], isFalse);
       expect(infoLoggerTester.printedLevels[LogLevel.trace], isFalse);
@@ -48,7 +48,7 @@ void main() {
       final noneLoggerTester = LoggerTester(logger: noneLogger);
       noneLoggerTester.fatal("Fatal on infoLogger", error: Error(), stackTrace: StackTrace.current);
       noneLoggerTester.error("Error on infoLogger", error: Error(), stackTrace: StackTrace.current);
-      noneLoggerTester.warning("Warning on infoLogger");
+      noneLoggerTester.warn("Warning on infoLogger");
       noneLoggerTester.info("Info on infoLogger");
       noneLoggerTester.debug("Debug on infoLogger");
       noneLoggerTester.trace("Trace on infoLogger");
@@ -56,7 +56,7 @@ void main() {
 
       expect(noneLoggerTester.printedLevels[LogLevel.fatal], isFalse);
       expect(noneLoggerTester.printedLevels[LogLevel.error], isFalse);
-      expect(noneLoggerTester.printedLevels[LogLevel.warning], isFalse);
+      expect(noneLoggerTester.printedLevels[LogLevel.warn], isFalse);
       expect(noneLoggerTester.printedLevels[LogLevel.info], isFalse);
       expect(noneLoggerTester.printedLevels[LogLevel.debug], isFalse);
       expect(noneLoggerTester.printedLevels[LogLevel.trace], isFalse);
