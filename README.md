@@ -103,11 +103,11 @@ class LoggerFactory implements ILoggerFactory {
 
 ## Implementations
 
-Want to be on the list? [Contact me](mailto:codelovercc@gmail.com).
-
 1. [dart_service_logger](https://pub.dev/packages/dart_service_logger)  
    Using [logger](https://pub.dev/packages/logger) and
    support [dart_service_provider](https://pub.dev/packages/dart_service_provider) extensions.
+
+Want to be on the list? [Contact me](mailto:codelovercc@gmail.com).
 
 ## Additional information
 
