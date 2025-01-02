@@ -40,7 +40,7 @@ void main() {
   final traceLogger = LoggerFactory(minLevel: LogLevel.trace).createLogger<MyClass>();
   traceLogger.fatal("Fatal on traceLogger", error: Error(), stackTrace: StackTrace.current);
   traceLogger.error("Error on traceLogger", error: Error(), stackTrace: StackTrace.current);
-  traceLogger.warning("Warning on traceLogger");
+  traceLogger.warn("Warning on traceLogger");
   traceLogger.info("Info on traceLogger");
   traceLogger.debug("Debug on traceLogger");
   traceLogger.trace("trace on traceLogger");
@@ -48,7 +48,7 @@ void main() {
   final infoLogger = LoggerFactory(minLevel: LogLevel.info).create("InfoLogger");
   infoLogger.fatal("Fatal on infoLogger", error: Error(), stackTrace: StackTrace.current);
   infoLogger.error("Error on infoLogger", error: Error(), stackTrace: StackTrace.current);
-  infoLogger.warning("Warning on infoLogger");
+  infoLogger.warn("Warning on infoLogger");
   infoLogger.info("Info on infoLogger");
   infoLogger.debug("Debug on infoLogger");
   infoLogger.trace("trace on infoLogger");
