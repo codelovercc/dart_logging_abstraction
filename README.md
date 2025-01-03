@@ -20,7 +20,7 @@ and the Flutter guide for
 [![Code size](https://img.shields.io/github/languages/code-size/codelovercc/dart_logging_abstraction?logo=github&logoColor=white)](https://github.com/codelovercc/dart_logging_abstraction)
 [![License](https://img.shields.io/github/license/codelovercc/dart_logging_abstraction?logo=open-source-initiative&logoColor=green)](https://github.com/codelovercc/dart_logging_abstraction/blob/main/LICENSE)
 
-An logging abstraction package for logging.
+A logging abstraction package for logging.
 
 ## Features
 
