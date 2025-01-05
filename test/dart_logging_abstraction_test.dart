@@ -6,7 +6,7 @@ void main() {
   group("Console logging tests.", () {
     // Logging implementation example can be found in lib/src/console_logging.dart
     test("Trace level test", () {
-      final traceLogger = LoggerFactory(minLevel: LogLevel.trace).createLogger<MyClass>();
+      final traceLogger = ConsoleLoggerFactory(minLevel: LogLevel.trace).createLogger<MyClass>();
       final traceLoggerTester = LoggerTester(logger: traceLogger);
       traceLoggerTester.fatal("Fatal on traceLogger", error: Error(), stackTrace: StackTrace.current);
       traceLoggerTester.error("Error on traceLogger", error: Error(), stackTrace: StackTrace.current);
@@ -25,7 +25,7 @@ void main() {
       expect(traceLoggerTester.printedLevels[LogLevel.none], isFalse);
     });
     test("Info level test", () {
-      final infoLogger = LoggerFactory(minLevel: LogLevel.info).create("InfoLogger");
+      final infoLogger = ConsoleLoggerFactory(minLevel: LogLevel.info).create("InfoLogger");
       final infoLoggerTester = LoggerTester(logger: infoLogger);
       infoLoggerTester.fatal("Fatal on infoLogger", error: Error(), stackTrace: StackTrace.current);
       infoLoggerTester.error("Error on infoLogger", error: Error(), stackTrace: StackTrace.current);
@@ -44,7 +44,7 @@ void main() {
       expect(infoLoggerTester.printedLevels[LogLevel.none], isFalse);
     });
     test("None level should print nothing", () {
-      final noneLogger = LoggerFactory(minLevel: LogLevel.none).createLogger<MyClass>();
+      final noneLogger = ConsoleLoggerFactory(minLevel: LogLevel.none).createLogger<MyClass>();
       final noneLoggerTester = LoggerTester(logger: noneLogger);
       noneLoggerTester.fatal("Fatal on infoLogger", error: Error(), stackTrace: StackTrace.current);
       noneLoggerTester.error("Error on infoLogger", error: Error(), stackTrace: StackTrace.current);
