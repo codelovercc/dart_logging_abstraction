@@ -1,3 +1,11 @@
+## 1.1.0
+
+- `ConsoleLogger` now support print colored messages.
+
+Breaking changes:
+
+- Rename `LoggerFactory` to `ConsoleLoggerFactory`
+
 ## 1.0.6
 
 Breaking changes:
