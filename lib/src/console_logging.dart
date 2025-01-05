@@ -117,6 +117,7 @@ extension ConsoleColorExtensions on ConsoleColor {
 /// use [T] type as the logger name.
 class ConsoleLogger<T> extends ILogger4<T> {
   final LogLevel _minLevel;
+  final bool _colored;
 
   static final Map<LogLevel, String Function(String msg)> _levelMsgColors = {
     LogLevel.trace: (msg) => msg,
@@ -136,7 +137,10 @@ class ConsoleLogger<T> extends ILogger4<T> {
     LogLevel.fatal: (msg) => ConsoleColors.white.withBgMsg(msg, ConsoleColors.magenta),
   };
 
-  ConsoleLogger({super.name, required LogLevel minLevel}) : _minLevel = minLevel;
+  /// Construct with [name] and [minLevel], When [colored] is `true` (the default), the log messages will be print in color.
+  ConsoleLogger({super.name, required LogLevel minLevel, bool colored = true})
+      : _minLevel = minLevel,
+        _colored = colored;
 
   @override
   bool isEnabled(LogLevel logLevel) => logLevel >= _minLevel && logLevel != LogLevel.none;
@@ -146,8 +150,8 @@ class ConsoleLogger<T> extends ILogger4<T> {
     if (!isEnabled(logLevel)) {
       return;
     }
-    final labelColor = _levelLabelColors[logLevel] ?? (msg) => msg;
-    final msgColor = _levelMsgColors[logLevel] ?? (msg) => msg;
+    final labelColor = _colored ? _levelLabelColors[logLevel] ?? (msg) => msg : (String msg) => msg;
+    final msgColor = _colored ? _levelMsgColors[logLevel] ?? (msg) => msg : (String msg) => msg;
     final writer = StringBuffer();
     writer.write(labelColor("[${logLevel.name.toUpperCase()}]"));
     writer.writeln(" ${DateTime.now()} [$name]");
